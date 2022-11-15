@@ -1,0 +1,52 @@
+.about {
+  &__content {
+    position: relative;
+    
+    > .border::before {
+      @include border;
+      top: 91px;
+    }
+  }
+
+  &__top-text {
+    margin-left: 80px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.364;
+    text-transform: uppercase;
+    color: var(--text-color-dark);
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+    letter-spacing: 0.05em;
+    color: var(--text-color-dark);
+    margin-bottom: 20px;
+  }
+
+  &__bottom-text {
+    font-size: 16px;
+    line-height: 1.625;
+    color: #555555;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.857;
+    color: #555555;
+    margin-bottom: 40px;
+  }
+
+  &__btn {
+    @include button;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: auto;
+  }
+}

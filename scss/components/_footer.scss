@@ -1,0 +1,45 @@
+.footer {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.364;
+  letter-spacing: 0.2em;
+
+  display: flex;
+  padding-top: 44px;
+  padding-bottom: 44px;
+
+  &__copy {
+    color: var(--text-color-gray);
+    margin-right: 131px;
+    align-self: flex-end;
+    padding-top: 35px;
+  }
+
+  &__list {
+    position: relative;
+    display: flex;
+    gap: 40px;
+    .border::before {
+      @include border;
+      left: -100px;
+      top: 7px;
+    }
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__item {
+    color: var(--text-color-dark);
+  }
+
+  &__link {
+    display: inline-block;
+    padding-bottom: 10px;
+    &:hover,
+    &:focus {
+      color: var(--acent-color);
+    }
+  }
+}

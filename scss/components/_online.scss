@@ -1,0 +1,85 @@
+.online {
+  background: #191c26;
+
+  &__title {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 49px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: var(--text-color-light);
+    margin-bottom: 44px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.364;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(157, 164, 189, 0.4);
+    position: absolute;
+  }
+
+  &__item {
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+    padding-left: 60px;
+    padding-right: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    outline: transparent;
+
+    &:hover,
+    &:focus {
+      border-color: var(--text-color-light);
+    }
+
+    &:hover + .online__label,
+    &:focus + .online__label {
+      color: var(--text-color-light);
+    }
+  }
+
+  &__input {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.364;
+    color: rgba(157, 164, 189, 0.4);
+  }
+
+  &__text {
+    resize: none;
+    height: 76px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.364;
+    color: rgba(157, 164, 189, 0.4);
+  }
+
+  &__btn {
+    @include button;
+    margin: 0 auto;
+    padding-left: 62px;
+    padding-right: 62px;
+    background-color: inherit;
+    color: var(--text-color-light);
+  }
+}

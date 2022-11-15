@@ -1,0 +1,146 @@
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(25, 28, 38, 0.2);
+  transition: opacity 500ms, visibility 500ms;
+
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 500ms, visibility 500ms;
+  }
+
+  // .nav-container.is-hidden .nav {
+  //   transform: translate(-50%, -50%) scale(0);
+  // }
+}
+
+.menu-close {
+  background-color: var(--text-color-light);
+  border: none;
+  margin-bottom: 30px;
+  margin-left: auto;
+  &:hover,
+  &:focus {
+    fill: var(--acent-color);
+  }
+}
+
+.nav-wraper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 68%;
+}
+
+.nav {
+  position: fixed;
+  background-color: var(--text-color-light);
+  width: 70%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  opacity: 1;
+  padding: 48px 40px;
+
+  transition: opacity 500ms;
+
+  display: flex;
+  flex-direction: column;
+
+  &__menu {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.389;
+    letter-spacing: 0.1em;
+    color: var(--text-color-dark);
+  }
+
+  &__menu-item {
+    margin-bottom: 24px;
+  }
+
+  &__menu-link {
+    &:hover,
+    &:focus {
+      color: var(--acent-color);
+    }
+  }
+
+  &__connect {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.389;
+    letter-spacing: 0.1em;
+    color: var(--text-color-dark);
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__connect-tel {
+    margin-bottom: 24px;
+    &:hover,
+    &:focus {
+      color: var(--acent-color);
+    }
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  &__connect-btn {
+    @include button;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-bottom: 24px;
+    margin-right: auto;
+
+    // &:hover,
+    // &:focus {
+    //   background-color: var(--acent-color);
+    //   color: var(--text-color-light);
+    // }
+  }
+
+  &__soc-list {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.357;
+    color: var(--text-color-dark);
+    margin-left: 100px;
+
+    @include mobile {
+      margin-left: 80px;
+    }
+  }
+
+  &__soc-item {
+    margin-bottom: 24px;
+    position: relative;
+
+    > .border::before {
+      @include border;
+      left: -100px;
+
+      @include mobile {
+        left: -80px;
+      }
+    }
+  }
+
+  &__soc-link {
+    &:hover,
+    &:focus {
+      color: var(--acent-color);
+    }
+  }
+}

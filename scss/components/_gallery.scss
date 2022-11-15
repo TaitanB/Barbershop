@@ -1,0 +1,25 @@
+.gallery {
+  position: relative;
+
+  .border::before {
+    @include border;
+    left: 31px;
+    top: 91px;
+  }
+
+  &__top-text {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.364;
+    text-transform: uppercase;
+    color: var(--text-color-dark);
+    margin-left: 80px;
+    margin-bottom: 71px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+  }
+}
