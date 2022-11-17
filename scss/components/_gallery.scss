@@ -1,13 +1,12 @@
 .gallery {
-  position: relative;
-
   .border::before {
     @include border;
-    left: 31px;
-    top: 91px;
+    left: -80px;
+    top: 7px;
   }
 
   &__top-text {
+    position: relative;
     font-weight: 600;
     font-size: 11px;
     line-height: 1.364;

@@ -1,6 +1,18 @@
 .hero {
+  max-width: 480px;
+  margin: 0 auto;
   padding: 208px 0;
   background: rgba(25, 28, 38, 0.2);
+
+  @include tablet {
+    max-width: 584px;
+    margin-left: auto;
+    position: relative;
+  }
+
+  @include desktop {
+    max-width: 1200px;
+  }
 
   .hero__content {
     display: flex;
@@ -50,6 +62,22 @@
     }
   }
 
+  @include tablet {
+    @keyframes changeBgImg {
+      0% {
+        background-image: url(/images/tab/slider1-tab.jpg);
+      }
+
+      50% {
+        background-image: url(/images/tab/slider2-tab.jpg);
+      }
+
+      100% {
+        background-image: url(/images/tab/slider3-tab.jpg);
+      }
+    }
+  }
+
   //------------------------------------------
 
   background-repeat: no-repeat;
@@ -60,13 +88,13 @@
   &__title {
     font-family: "Raleway";
     font-weight: 700;
-    font-size: 48px;
+    font-size: 40px;
     line-height: 1.167;
     letter-spacing: 0.05em;
     color: var(--text-color-light);
 
     @include mobile {
-      font-size: 40px;
+      font-size: 48px;
     }
   }
 

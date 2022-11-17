@@ -3,6 +3,11 @@
   padding-top: 40px;
   padding-bottom: 40px;
   width: 100%;
+
+  @include tablet {
+    padding-top: 32px;
+    width: 480px;
+  }
 }
 
 .header-container {
@@ -10,6 +15,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  @include tablet {
+    align-items: start;
+    // padding-right: 0;
+  }
 }
 
 .logo {
@@ -17,6 +27,10 @@
   &:hover,
   &:focus {
     fill: #ff6c00;
+  }
+
+  @include tablet {
+    fill: var(--text-color-dark);
   }
 }
 
@@ -27,6 +41,10 @@
   &:hover,
   &:focus {
     fill: #ff6c00;
+  }
+
+  @include tablet {
+    display: none;
   }
 }
 

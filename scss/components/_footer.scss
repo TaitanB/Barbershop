@@ -10,14 +10,14 @@
 
   &__copy {
     color: var(--text-color-gray);
-    margin-right: 131px;
+    margin-right: auto;
     align-self: flex-end;
     padding-top: 35px;
   }
 
   &__list {
     position: relative;
-    display: flex;
+    display: block;
     gap: 40px;
     .border::before {
       @include border;
@@ -26,7 +26,7 @@
     }
 
     @include mobile {
-      display: block;
+      display: flex;
     }
   }
 

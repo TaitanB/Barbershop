@@ -1,13 +1,13 @@
 .prices {
-  position: relative;
   background: #111319;
   padding: 84px 0;
-  background-image: url(/images/svg/services.svg);
+  background-image: url(./images/svg/services.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
   &__top-text {
+    position: relative;
     margin-left: 80px;
     margin-bottom: 20px;
     font-weight: 600;
@@ -20,8 +20,8 @@
   .border::before {
     @include border;
     background: rgba(157, 164, 189, 0.6);
-    top: 91px;
-    left: 31px;
+    top: 7px;
+    left: -80px;
   }
 
   &__title {
@@ -38,15 +38,15 @@
   &__wrap {
     background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
     margin-bottom: 44px;
-    padding: 30px 20px 30px 40px;
+    padding: 30px 15px 30px 15px;
 
     display: flex;
     flex-direction: column;
     gap: 20px;
 
     @include mobile {
-      padding-left: 15px;
-      padding-right: 15px;
+      padding-left: 40px;
+      padding-right: 20px;
     }
   }
 
@@ -59,7 +59,7 @@
   &__item {
     display: flex;
     justify-content: space-between;
-    font-size: 14px;
+    font-size: 11px;
     line-height: 1.429;
     color: var(--text-color-gray);
     align-items: baseline;
@@ -77,7 +77,7 @@
     display: block;
 
     @include mobile {
-      font-size: 11px;
+      font-size: 14px;
     }
   }
 

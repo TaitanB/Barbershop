@@ -19,6 +19,16 @@
   // .nav-container.is-hidden .nav {
   //   transform: translate(-50%, -50%) scale(0);
   // }
+
+  @include tablet {
+    position: static;
+    background: none;
+    &.is-hidden {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
 }
 
 .menu-close {
@@ -30,6 +40,10 @@
   &:focus {
     fill: var(--acent-color);
   }
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .nav-wraper {
@@ -37,6 +51,13 @@
   flex-direction: column;
   justify-content: space-between;
   height: 68%;
+
+  @include tablet {
+    flex-direction: row;
+    height: 100%;
+    justify-content: end;
+    padding-left: 31px;
+  }
 }
 
 .nav {
@@ -55,16 +76,38 @@
   display: flex;
   flex-direction: column;
 
+  @include tablet {
+    position: static;
+    width: 100%;
+    background-color: transparent;
+    padding: 0;
+  }
+
   &__menu {
     font-weight: 600;
     font-size: 18px;
     line-height: 1.389;
     letter-spacing: 0.1em;
     color: var(--text-color-dark);
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.1em;
+      color: var(--text-color-light);
+    }
   }
 
   &__menu-item {
     margin-bottom: 24px;
+
+    @include tablet {
+      margin-left: 20px;
+      padding-top: 20px;
+    }
   }
 
   &__menu-link {
@@ -83,6 +126,14 @@
 
     display: flex;
     flex-direction: column;
+
+    @include tablet {
+      flex-direction: column-reverse;
+      margin: 0;
+      margin-left: auto;
+      margin-top: 8px;
+      gap: 20px;
+    }
   }
 
   &__connect-tel {
@@ -92,8 +143,16 @@
       color: var(--acent-color);
     }
 
-    @include mobile {
+    @media screen and (max-width: 479px) {
       font-size: 14px;
+    }
+    @include tablet {
+      font-size: 12px;
+      line-height: 16px;
+      text-align: center;
+      letter-spacing: 0.1em;
+      color: var(--text-color-light);
+      margin-bottom: 0;
     }
   }
 
@@ -109,6 +168,13 @@
     //   background-color: var(--acent-color);
     //   color: var(--text-color-light);
     // }
+
+    @include tablet {
+      background-color: var(--acent-color);
+      background-color: inherit;
+      color: var(--text-color-light);
+      margin-bottom: 0;
+    }
   }
 
   &__soc-list {
@@ -116,10 +182,22 @@
     font-size: 14px;
     line-height: 1.357;
     color: var(--text-color-dark);
-    margin-left: 100px;
+    margin-left: 80px;
 
     @include mobile {
-      margin-left: 80px;
+      margin-left: 100px;
+    }
+
+    @include tablet {
+      display: flex;
+      gap: 40px;
+
+      position: absolute;
+      transform: rotate(-90deg);
+      transform-origin: center left;
+      display: flex;
+      top: 450px;
+      left: -35px;
     }
   }
 
@@ -129,11 +207,14 @@
 
     > .border::before {
       @include border;
-      left: -100px;
+      left: -80px;
 
       @include mobile {
-        left: -80px;
+        left: -100px;
       }
+    }
+    @include tablet {
+      margin-bottom: 0;
     }
   }
 

@@ -1,15 +1,15 @@
 .barbers {
-  position: relative;
   background: #f7f7f7;
   padding-top: 84px;
   padding-bottom: 84px;
   .border::before {
     @include border;
-    left: 31px;
-    top: 91px;
+    left: -80px;
+    top: 7px;
   }
 
   &__top-text {
+    position: relative;
     font-weight: 600;
     font-size: 11px;
     line-height: 1.364;
