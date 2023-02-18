@@ -14,11 +14,25 @@
     color: var(--text-color-dark);
     margin-left: 80px;
     margin-bottom: 71px;
+
+    @include tablet {
+      margin-bottom: 44px;
+    }
   }
 
   &__list {
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     gap: var(--gap);
+    flex-wrap: wrap;
+  }
+
+  &__content {
+    // width: 690px;
+    // gap: 30px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    // align-items: center;
   }
 }

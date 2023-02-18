@@ -1,9 +1,43 @@
 .contacts {
-  background: #191c26;
-  background-image: url(./images/svg/contacts.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  // background: #191c26;
+  // background-image: url(../images/mob/bg-contacts-mob-min.png);
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
+
+  // @include tablet {
+  //   background-image: url(../images/tab/bg-contacts-tab-min.png);
+  // }
+
+  // @include desctop {
+  //   background: transparent;
+  //   background-image: none;
+  //   width: 50%;
+  // }
+
+  &__container {
+    @include tablet {
+      display: flex;
+      gap: 30px;
+    }
+
+    @include desctop {
+      display: block;
+      margin-left: 100px;
+    }
+  }
+
+  &__left {
+    width: 330px;
+  }
+
+  &__right {
+    margin-top: 89px;
+
+    @include desctop {
+      margin-top: 0;
+    }
+  }
 
   &__title {
     font-family: "Raleway";
@@ -15,6 +49,14 @@
     letter-spacing: 0.05em;
     color: var(--text-color-light);
     margin-bottom: 40px;
+
+    @include tablet {
+      text-align: left;
+    }
+
+    @include desctop {
+      margin-top: 10px;
+    }
   }
 
   &__address {
@@ -22,6 +64,14 @@
     line-height: 1.667;
     color: var(--text-color-gray);
     margin-bottom: 44px;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+
+    @include desctop {
+      margin-bottom: 70px;
+    }
   }
 
   &__address-link {
@@ -87,6 +137,10 @@
   justify-content: flex-end;
   align-items: center;
   margin-bottom: 20px;
+
+  @include tablet {
+    width: 200px;
+  }
 }
 
 .link-icon {

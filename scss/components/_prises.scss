@@ -1,10 +1,13 @@
 .prices {
   background: #111319;
-  padding: 84px 0;
-  background-image: url(./images/svg/services.svg);
+  background-image: url(../images/mob/bg-servises-mob-min.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @include tablet {
+    background-image: url(../images/tab/bg-servises-tab-min.png);
+  }
 
   &__top-text {
     position: relative;
@@ -33,20 +36,33 @@
     letter-spacing: 0.05em;
     color: var(--text-color-light);
     margin-bottom: 44px;
+
+    @include tablet {
+      font-size: 42px;
+      line-height: 1.167;
+    }
+
+    @include desctop {
+    }
   }
 
   &__wrap {
     background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
     margin-bottom: 44px;
-    padding: 30px 15px 30px 15px;
+    padding: 30px 20px 30px 40px;
 
     display: flex;
     flex-direction: column;
     gap: 20px;
 
-    @include mobile {
-      padding-left: 40px;
-      padding-right: 20px;
+    @include tablet {
+      padding: 32px 40px;
+    }
+
+    @include desctop {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
     }
   }
 
@@ -54,6 +70,16 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @include desctop {
+      background: linear-gradient(
+        180deg,
+        #171a24 0%,
+        rgba(23, 26, 36, 0.2) 100%
+      );
+      width: 570px;
+      padding: 30px 22px 30px 20px;
+    }
   }
 
   &__item {
@@ -75,9 +101,11 @@
 
   &__item-text {
     display: block;
+    font-size: 14px;
 
-    @include mobile {
-      font-size: 14px;
+    @include tablet {
+      font-size: 18px;
+      line-height: 1.667;
     }
   }
 
@@ -92,4 +120,8 @@
 .prices-container {
   display: flex;
   flex-direction: column;
+}
+
+.left-text {
+  text-align: right;
 }

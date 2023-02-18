@@ -1,7 +1,5 @@
 .barbers {
   background: #f7f7f7;
-  padding-top: 84px;
-  padding-bottom: 84px;
   .border::before {
     @include border;
     left: -80px;
@@ -17,6 +15,14 @@
     color: var(--text-color-dark);
     margin-left: 80px;
     margin-bottom: 20px;
+
+    @include tablet {
+      margin-left: 200px;
+    }
+
+    @include desctop {
+      margin-left: 80px;
+    }
   }
 
   &__title {
@@ -27,6 +33,20 @@
     letter-spacing: 0.05em;
     color: var(--text-color-dark);
     margin-bottom: 44px;
+
+    @include tablet {
+      margin-left: 120px;
+    }
+
+    @include desctop {
+      margin-left: 0;
+    }
+  }
+
+  &__content {
+    // width: 418px;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -34,6 +54,18 @@
   display: flex;
   flex-wrap: wrap;
   gap: 64px;
+
+  @include tablet {
+    width: 450px;
+    margin: 0 auto;
+  }
+
+  @include desctop {
+    flex-wrap: nowrap;
+    width: 1170px;
+    margin: 0;
+    gap: 30px;
+  }
 
   &__item-content {
     padding: 30px 30px 0 30px;
@@ -50,11 +82,17 @@
 
   &__item-text {
     font-size: 14px;
-    line-height: 1.357;
+    line-height: 1.358;
     text-align: center;
     color: var(--acent-color);
     margin-bottom: 30px;
   }
+
+  // &__item {
+  //   @include tablet {
+  //     margin: 0 auto;
+  //   }
+  // }
 }
 
 .socials {

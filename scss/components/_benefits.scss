@@ -5,10 +5,24 @@
 
   &__content {
     position: relative;
-    > .border::before {
+    .border::before {
       @include border;
       background: var(--text-color-dark);
       top: 7px;
+
+      @include desctop {
+        left: 600px;
+      }
+    }
+
+    @include desctop {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 130px;
+      padding: 0 70px 0 100px;
+      &__desc {
+        width: 500px;
+      }
     }
   }
 
@@ -31,6 +45,10 @@
     letter-spacing: 0.04em;
     color: var(--text-color-dark);
     margin-bottom: 20px;
+
+    @include tablet {
+      width: 450px;
+    }
   }
 
   &__bottom-text {
@@ -39,16 +57,31 @@
     letter-spacing: 0.05em;
     color: #555555;
     margin-bottom: 44px;
+
+    @include tablet {
+      width: 500px;
+    }
   }
 
   &__list {
     display: flex;
     flex-wrap: wrap;
+
+    @include tablet {
+      margin-left: 240px;
+    }
+
+    @include desctop {
+      margin-left: 0;
+      width: 370px;
+    }
   }
 
   &__item {
     background-color: #f7f7f7;
-    padding: 20px 36px;
+    padding: 20px 32px;
+    width: 194px;
+    height: 133px;
     text-align: center;
     @include calc(2);
     position: relative;
@@ -65,7 +98,11 @@
       justify-content: center;
     }
 
-    &:nth-child(2n) {
+    &:nth-child(2) {
+      margin-top: 35px;
+    }
+
+    &:nth-child(4) {
       margin-top: 30px;
     }
 
@@ -74,9 +111,18 @@
       margin-right: 30px;
     }
 
-    @include mobile {
-      padding-left: 17px;
-      padding-right: 17px;
+    @include tablet {
+      width: 210px;
+      padding: 20px 40px;
+    }
+
+    @include desctop {
+      width: 170px;
+      padding: 20px 24px;
+
+      &:nth-child(3) > .benefits__item-text {
+        padding: 0 17px;
+      }
     }
   }
 
@@ -85,6 +131,7 @@
     font-size: 11px;
     line-height: 1.364;
     color: var(--text-color-dark);
+    padding: 0 10px;
   }
 }
 

@@ -1,6 +1,10 @@
 .online {
   background: #191c26;
 
+  @include desctop {
+    width: 50%;
+  }
+
   &__title {
     font-family: "Raleway";
     font-style: normal;
@@ -11,12 +15,24 @@
     letter-spacing: 0.05em;
     color: var(--text-color-light);
     margin-bottom: 44px;
+
+    @include tablet {
+      text-align: left;
+    }
+
+    @include desctop {
+      margin-top: 10px;
+    }
   }
 
   &__form {
     display: flex;
     flex-direction: column;
     gap: 44px;
+
+    @include desctop {
+      padding-right: 30px;
+    }
   }
 
   &__wrap {
@@ -63,6 +79,14 @@
     font-size: 11px;
     line-height: 1.364;
     color: rgba(157, 164, 189, 0.4);
+
+    @include tablet {
+      width: 330px;
+    }
+
+    @include desctop {
+      width: 270px;
+    }
   }
 
   &__text {
@@ -81,5 +105,14 @@
     padding-right: 62px;
     background-color: inherit;
     color: var(--text-color-light);
+
+    @include tablet {
+      margin-left: 0;
+    }
   }
+}
+
+.wrap {
+  display: flex;
+  gap: 30px;
 }

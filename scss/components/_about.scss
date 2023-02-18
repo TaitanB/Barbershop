@@ -1,11 +1,30 @@
 .about {
-  &__content {
+  &__desc {
+    display: flex;
+    flex-direction: column;
     position: relative;
+
+    @include tablet {
+      width: 330px;
+    }
+
+    @include desctop {
+      width: 470px;
+    }
 
     > .border::before {
       @include border;
-      top: 91px;
+      // top: 91px;
+
+      // @include tablet {
+      //   top: 7px;
+      // }
     }
+  }
+
+  &__content {
+    display: flex;
+    gap: 30px;
   }
 
   &__top-text {
@@ -23,10 +42,15 @@
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
-    line-height: 33px;
+    line-height: 1.179;
     letter-spacing: 0.05em;
     color: var(--text-color-dark);
     margin-bottom: 20px;
+
+    @include desctop {
+      font-size: 42px;
+      line-height: 49px;
+    }
   }
 
   &__bottom-text {
@@ -34,13 +58,35 @@
     line-height: 1.625;
     color: #555555;
     margin-bottom: 20px;
+
+    @include tablet {
+      font-size: 18px;
+      line-height: 1.667;
+      width: 300px;
+    }
+
+    @include desctop {
+      width: 450px;
+    }
   }
 
   &__text {
+    width: 400px;
     font-size: 14px;
-    line-height: 1.857;
+    line-height: 1.858;
+    letter-spacing: 0.02em;
     color: #555555;
     margin-bottom: 40px;
+
+    @include tablet {
+      width: 330px;
+      margin-bottom: 77px;
+    }
+
+    @include desctop {
+      width: 470px;
+      margin-bottom: 42px;
+    }
   }
 
   &__btn {
@@ -52,8 +98,27 @@
 }
 
 .img-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  // flex-grow: 1;
+  // position: absolute;
+  overflow: hidden;
+
   @include tablet {
     position: static;
-    overflow: visible;
+    width: 330px;
+    height: 500px;
+    margin: 0;
+  }
+
+  @include desctop {
+    flex-direction: row;
+    width: 570px;
+    height: 445px;
   }
 }
+
+// .img-list img {
+//   width: 100%;
+// }

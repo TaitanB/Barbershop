@@ -8,11 +8,19 @@
   padding-top: 44px;
   padding-bottom: 44px;
 
+  @include tablet {
+    padding: 56px 39px;
+  }
+
   &__copy {
     color: var(--text-color-gray);
     margin-right: auto;
     align-self: flex-end;
     padding-top: 35px;
+
+    @include tablet {
+      padding-top: 0;
+    }
   }
 
   &__list {
@@ -40,6 +48,10 @@
     &:hover,
     &:focus {
       color: var(--acent-color);
+    }
+
+    @include tablet {
+      padding-bottom: 0;
     }
   }
 }
