@@ -196,8 +196,8 @@
       transform: rotate(-90deg);
       transform-origin: center left;
       display: flex;
-      top: 450px;
-      left: -35px;
+      top: 430px;
+      left: -28px;
     }
   }
 
@@ -211,6 +211,7 @@
 
       @include mobile {
         left: -100px;
+        top: 10px;
       }
     }
     @include tablet {

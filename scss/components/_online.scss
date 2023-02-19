@@ -96,6 +96,13 @@
     font-size: 11px;
     line-height: 1.364;
     color: rgba(157, 164, 189, 0.4);
+
+    @include tablet {
+      width: 690px;
+    }
+    @include desctop {
+      width: 570px;
+    }
   }
 
   &__btn {
@@ -114,5 +121,10 @@
 
 .wrap {
   display: flex;
-  gap: 30px;
+  gap: 44px;
+  flex-direction: column;
+  @include tablet {
+    flex-direction: row;
+    gap: 30px;
+  }
 }
