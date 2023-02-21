@@ -221,6 +221,10 @@ img {
   -webkit-transition: opacity 500ms, visibility 500ms;
   transition: opacity 500ms, visibility 500ms;
 }
+.nav-container .nav-container.is-hidden .nav {
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+}
 @media screen and (min-width: 768px) {
   .nav-container {
     position: static;
@@ -293,9 +297,6 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
 }
 @media screen and (min-width: 768px) {
   .nav {
@@ -405,6 +406,10 @@ img {
   padding-right: 35px;
   margin-bottom: 24px;
   margin-right: auto;
+}
+.nav__connect-btn:hover, .nav__connect-btn:focus {
+  background-color: var(--acent-color);
+  color: var(--text-color-light);
 }
 .nav__connect-btn:hover, .nav__connect-btn:focus {
   background-color: var(--acent-color);

@@ -1,20 +1,4 @@
 .contacts {
-  // background: #191c26;
-  // background-image: url(../images/mob/bg-contacts-mob-min.png);
-  // background-repeat: no-repeat;
-  // background-position: center;
-  // background-size: cover;
-
-  // @include tablet {
-  //   background-image: url(../images/tab/bg-contacts-tab-min.png);
-  // }
-
-  // @include desctop {
-  //   background: transparent;
-  //   background-image: none;
-  //   width: 50%;
-  // }
-
   &__container {
     @include tablet {
       display: flex;
