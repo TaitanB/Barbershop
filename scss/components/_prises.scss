@@ -42,7 +42,7 @@
       line-height: 1.167;
     }
 
-    @include desctop {
+    @include desktop {
     }
   }
 
@@ -59,7 +59,7 @@
       padding: 32px 40px;
     }
 
-    @include desctop {
+    @include desktop {
       display: flex;
       flex-direction: row;
       padding: 0;
@@ -71,7 +71,7 @@
     flex-direction: column;
     gap: 20px;
 
-    @include desctop {
+    @include desktop {
       background: linear-gradient(
         180deg,
         #171a24 0%,

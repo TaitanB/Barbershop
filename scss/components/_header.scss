@@ -3,10 +3,11 @@
   padding-top: 40px;
   padding-bottom: 40px;
   width: 100%;
+  z-index: 1;
 
   @include tablet {
     padding-top: 32px;
-    width: 480px;
+    // width: 480px;
   }
 }
 
@@ -20,6 +21,10 @@
     align-items: start;
     // padding-right: 0;
   }
+
+  @include desktop {
+    margin: 0 auto;
+  }
 }
 
 .logo {
@@ -28,6 +33,10 @@
   &:focus {
     fill: #ff6c00;
   }
+
+  // &__icon {
+  //   margin-right: 131px;
+  // }
 
   @include tablet {
     fill: var(--text-color-dark);

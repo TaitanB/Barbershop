@@ -1,7 +1,7 @@
 .online {
   background: #191c26;
 
-  @include desctop {
+  @include desktop {
     width: 50%;
   }
 
@@ -20,7 +20,7 @@
       text-align: left;
     }
 
-    @include desctop {
+    @include desktop {
       margin-top: 10px;
     }
   }
@@ -30,7 +30,7 @@
     flex-direction: column;
     gap: 44px;
 
-    @include desctop {
+    @include desktop {
       padding-right: 30px;
     }
   }
@@ -84,7 +84,7 @@
       width: 330px;
     }
 
-    @include desctop {
+    @include desktop {
       width: 270px;
     }
   }
@@ -100,7 +100,7 @@
     @include tablet {
       width: 690px;
     }
-    @include desctop {
+    @include desktop {
       width: 570px;
     }
   }

@@ -4,18 +4,19 @@
   }
 
   &__content {
+    width: 100%;
     position: relative;
     .border::before {
       @include border;
       background: var(--text-color-dark);
       top: 7px;
 
-      @include desctop {
+      @include desktop {
         left: 600px;
       }
     }
 
-    @include desctop {
+    @include desktop {
       display: flex;
       flex-direction: row-reverse;
       gap: 130px;
@@ -68,10 +69,11 @@
     flex-wrap: wrap;
 
     @include tablet {
-      margin-left: 240px;
+      width: 450px;
+      margin-left: auto;
     }
 
-    @include desctop {
+    @include desktop {
       margin-left: 0;
       width: 370px;
     }
@@ -79,9 +81,9 @@
 
   &__item {
     background-color: #f7f7f7;
-    padding: 20px 32px;
-    width: 194px;
-    height: 133px;
+    // padding: 20px 32px;
+    // width: 194px;
+    // height: 133px;
     text-align: center;
     @include calc(2);
     position: relative;
@@ -117,12 +119,18 @@
       margin-right: 30px;
     }
 
+    @include mobile {
+      padding: 20px 32px;
+      width: 194px;
+      height: 133px;
+    }
+
     @include tablet {
       width: 210px;
       padding: 20px 40px;
     }
 
-    @include desctop {
+    @include desktop {
       width: 170px;
       padding: 20px 24px;
 
