@@ -14,8 +14,6 @@
     @include desktop {
       width: 1200px;
     }
-
-
   }
 
   //-------------------------------------
@@ -28,6 +26,7 @@
     background-position: center;
     background-size: cover;
     flex-grow: 1;
+
     @include retina {
       background-image: url(../images/mob/slider1-2x-mob.jpg);
     }
@@ -71,6 +70,7 @@
 
     @include tablet {
       padding: 272px 107px 237px 120px;
+
       @keyframes changeBgImg {
         0% {
           background-image: url(../images/tab/slider1-tab.jpg);
@@ -97,6 +97,7 @@
 
     @include desktop {
       padding: 272px 100px 208px;
+
       @keyframes changeBgImg {
         0% {
           background-image: url(../images/desc/slider1-desc-min.png);
@@ -122,7 +123,6 @@
     }
 
     //------------------------------------------
-
 
     > .border::before {
       @include border;
@@ -155,8 +155,6 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: rgba(157, 164, 189, 0.6);
-
-
   }
 
   &__title {
@@ -169,7 +167,6 @@
     margin-bottom: 20px;
     display: flex;
     align-items: baseline;
-
 
     @include desktop {
       font-size: 72px;
